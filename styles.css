@@ -1,0 +1,254 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4faff;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #1e3a8a;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    color: #93c5fd;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: linear-gradient(to right, #1e40af, #3b82f6);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    clip-path: ellipse(120% 100% at 50% 0%);
+  }
+  
+  .hero-content {
+    max-width: 700px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .hero-content p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .hero-content .cta-button:hover {
+    background: #3b82f6;
+    transform: scale(1.05);
+  }
+  
+  /* Sections */
+  section {
+    padding: 20px 10%;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #264653;
+  }
+  
+  section p,
+  section ul {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  section ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  section ul li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  section ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #2a9d8f;
+    font-size: 1.5rem;
+  }
+  
+  /* Contact Section */
+  footer {
+    
+    background: #1e3a8a;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 10% 5px 40px ;
+    text-align: center;
+  }
+
+  footer h2 {
+    color: white;
+  }
+  
+  footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: white;
+  }
+  
+  footer strong {
+    font-weight: 700;
+    color: white;
+  }
+  
+.copy{
+    text-align: center;
+    opacity: 0.5;
+}
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .hero {
+      height: 60vh;
+    }
+  
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    section h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 20px;
+    }
+  
+    .hero {
+      height: 50vh;
+    }
+  
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    section h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
+.bubble-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.bubble {
+  width: 250px;
+  height: fit-content;
+  background: linear-gradient(135deg, #3b82f6, #93c5fd);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
